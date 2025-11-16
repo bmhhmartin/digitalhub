@@ -1,0 +1,20 @@
+{
+  "node": {
+    "7f9d17cba5c1311ef35a5a9a271ac5f9100dcf7cc6": {
+      "workers": {
+        "app/[lang]/[[...slug]]/page": {
+          "moduleId": "[project]/.next-internal/server/app/[lang]/[[...slug]]/page/actions.js { ACTIONS_MODULE0 => \"[project]/node_modules/.pnpm/@storyblok+react@4.7.0_next@16.0.1_@babel+core@7.28.5_react-dom@19.2.0_react@19.2.0__re_3f007cae82df8cb4280f1ccf611aa4d3/node_modules/@storyblok/react/dist/live-edit-update-action.mjs [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "liveEditUpdateAction",
+          "filename": "node_modules/.pnpm/@storyblok+react@4.7.0_next@16.0.1_@babel+core@7.28.5_react-dom@19.2.0_react@19.2.0__re_3f007cae82df8cb4280f1ccf611aa4d3/node_modules/@storyblok/react/dist/live-edit-update-action.mjs"
+        }
+      },
+      "layer": {
+        "app/[lang]/[[...slug]]/page": "action-browser"
+      },
+      "exportedName": "liveEditUpdateAction",
+      "filename": "node_modules/.pnpm/@storyblok+react@4.7.0_next@16.0.1_@babel+core@7.28.5_react-dom@19.2.0_react@19.2.0__re_3f007cae82df8cb4280f1ccf611aa4d3/node_modules/@storyblok/react/dist/live-edit-update-action.mjs"
+    }
+  },
+  "edge": {}
+}

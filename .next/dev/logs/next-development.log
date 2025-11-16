@@ -1,0 +1,23 @@
+[00:00:02.456] Server  LOG      ✓ Ready in 2.3s
+[00:00:06.830] Server  ERROR   You need to provide an access token to interact with Storyblok API. Read https://www.storyblok.com/docs/api/content-delivery#topics/authentication
+[00:00:06.857] Server  ERROR   Storyblok API not initialized
+[00:00:06.858] Server  ERROR   Storyblok API not initialized
+[00:00:06.897] Server  ERROR   Storyblok API not initialized
+[00:00:06.972] Server  ERROR   You need to provide an access token to interact with Storyblok API. Read https://www.storyblok.com/docs/api/content-delivery#topics/authentication
+[00:00:07.041] Server  ERROR   Storyblok API not initialized
+[00:00:07.041] Server  ERROR   Storyblok API not initialized
+[00:00:07.056] Server  ERROR   Storyblok API not initialized
+[00:00:08.267] Browser ERROR   You need to provide an access token to interact with Storyblok API. Read https://www.storyblok.com/docs/api/content-delivery#topics/authentication
+[00:00:08.763] Browser ERROR   You need to provide an access token to interact with Storyblok API. Read https://www.storyblok.com/docs/api/content-delivery#topics/authentication
+[00:01:27.027] Server  LOG        Reload env: .env.local
+[00:01:27.330] Server  ERROR   You need to provide an access token to interact with Storyblok API. Read https://www.storyblok.com/docs/api/content-delivery#topics/authentication
+[00:01:27.347] Server  ERROR   Storyblok API not initialized
+[00:01:27.347] Server  ERROR   Storyblok API not initialized
+[00:01:27.378] Server  ERROR   Storyblok API not initialized
+[00:01:27.403] Server  ERROR   Storyblok API not initialized
+[00:01:27.403] Server  ERROR   Storyblok API not initialized
+[00:01:27.419] Server  ERROR   Storyblok API not initialized
+[00:01:27.922] Server  LOG        Reload env: .env.local
+[00:01:28.523] Server  LOG      ✓ Compiled in 496ms
+[00:01:57.285] Browser WARN    Image with src "https://a.storyblok.com/f/288386390635210/1134x1068/fdab6027e5/xnip2025-11-14_21-25-11.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:57.712] Browser WARN    Image with src "https://a.storyblok.com/f/288386390635210/69x60/a47a86cf19/igb2b-1.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

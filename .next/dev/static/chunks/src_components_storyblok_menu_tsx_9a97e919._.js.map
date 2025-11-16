@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/martin/personal-projects/storyblok/digitalhub/src/components/storyblok/menu.tsx"],"sourcesContent":["import {\n\ttype SbBlokData,\n\tStoryblokServerComponent,\n\tstoryblokEditable,\n} from \"@storyblok/react/rsc\";\nimport type { Menu } from \"@/.storyblok/types/287474179047807/storyblok-components\";\n\nconst SBMenu = ({ blok }: { blok: Menu }) => {\n\treturn (\n\t\t<div {...storyblokEditable(blok as SbBlokData)} className=\"flex gap-4\">\n\t\t\t{blok?.items?.map((blok) => (\n\t\t\t\t<StoryblokServerComponent blok={blok} key={blok?._uid} />\n\t\t\t))}\n\t\t</div>\n\t);\n};\n\nexport default SBMenu;\n"],"names":[],"mappings":";;;;;;;AAAA;AAAA;AAAA;;;;;AAOA,MAAM,SAAS;QAAC,EAAE,IAAI,EAAkB;QAGpC;IAFH,qBACC,8VAAC,2dAAQ,IAAA,2YAAiB,EAAC;QAAqB,WAAU;kBACxD,iBAAA,4BAAA,cAAA,KAAM,KAAK,cAAX,kCAAA,YAAa,GAAG,CAAC,CAAC,qBAClB,8VAAC,6cAAwB;gBAAC,MAAM;eAAW,iBAAA,2BAAA,KAAM,IAAI;;;;;;;;;;AAIzD;KARM;uCAUS","debugId":null}}]
+}

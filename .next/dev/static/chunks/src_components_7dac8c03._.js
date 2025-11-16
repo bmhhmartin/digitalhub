@@ -1,0 +1,90 @@
+(globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([typeof document === "object" ? document.currentScript : undefined,
+"[project]/src/components/section/Footer.tsx [app-client] (ecmascript, next/dynamic entry, async loader)", ((__turbopack_context__) => {
+
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/src_components_section_Footer_tsx_46c34b2a._.js",
+  "static/chunks/src_components_section_Footer_tsx_c6367d94._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/section/Footer.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}),
+"[project]/src/components/storyblok/footer/footerItem.tsx [app-client] (ecmascript, next/dynamic entry, async loader)", ((__turbopack_context__) => {
+
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/src_components_storyblok_footer_footerItem_tsx_2c2d66e6._.js",
+  "static/chunks/src_components_storyblok_footer_footerItem_tsx_c6367d94._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/storyblok/footer/footerItem.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}),
+"[project]/src/components/storyblok/section.tsx [app-client] (ecmascript, next/dynamic entry, async loader)", ((__turbopack_context__) => {
+
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/src_components_storyblok_section_tsx_694cdf4e._.js",
+  "static/chunks/src_components_storyblok_section_tsx_c6367d94._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/storyblok/section.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}),
+"[project]/src/components/storyblok/hero.tsx [app-client] (ecmascript, next/dynamic entry, async loader)", ((__turbopack_context__) => {
+
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/src_components_storyblok_hero_tsx_6d363b4c._.js",
+  "static/chunks/src_components_storyblok_hero_tsx_c6367d94._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/storyblok/hero.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}),
+"[project]/src/components/storyblok/links.tsx [app-client] (ecmascript, next/dynamic entry, async loader)", ((__turbopack_context__) => {
+
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/src_components_storyblok_links_tsx_2fa7886e._.js",
+  "static/chunks/src_components_storyblok_links_tsx_c6367d94._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/storyblok/links.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}),
+"[project]/src/components/storyblok/menu.tsx [app-client] (ecmascript, next/dynamic entry, async loader)", ((__turbopack_context__) => {
+
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/src_components_storyblok_menu_tsx_9a97e919._.js",
+  "static/chunks/src_components_storyblok_menu_tsx_c6367d94._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/storyblok/menu.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}),
+"[project]/src/components/storyblok/menu_item.tsx [app-client] (ecmascript, next/dynamic entry, async loader)", ((__turbopack_context__) => {
+
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/src_components_storyblok_menu_item_tsx_3a95453a._.js",
+  "static/chunks/src_components_storyblok_menu_item_tsx_c6367d94._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/storyblok/menu_item.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}),
+"[project]/src/components/storyblok/pageContent.tsx [app-client] (ecmascript, next/dynamic entry, async loader)", ((__turbopack_context__) => {
+
+__turbopack_context__.v((parentImport) => {
+    return Promise.all([
+  "static/chunks/src_components_storyblok_pageContent_tsx_4a0acb10._.js",
+  "static/chunks/src_components_storyblok_pageContent_tsx_c6367d94._.js"
+].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
+        return parentImport("[project]/src/components/storyblok/pageContent.tsx [app-client] (ecmascript, next/dynamic entry)");
+    });
+});
+}),
+]);

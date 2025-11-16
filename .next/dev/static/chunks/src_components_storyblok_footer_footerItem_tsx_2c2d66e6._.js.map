@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/martin/personal-projects/storyblok/digitalhub/src/components/storyblok/footer/footerItem.tsx"],"sourcesContent":["import {\n\ttype SbBlokData,\n\tStoryblokServerComponent,\n\tstoryblokEditable,\n} from \"@storyblok/react/rsc\";\nimport type { FooterItem as FooterLeftStoryblok } from \"@/.storyblok/types/287474179047807/storyblok-components\";\n\nconst FooterItem = ({ blok }: { blok: FooterLeftStoryblok }) => {\n\treturn (\n\t\t<div {...storyblokEditable(blok as SbBlokData)} className=\"flex gap-2\">\n\t\t\t{blok?.items?.map((item, index) => (\n\t\t\t\t<StoryblokServerComponent\n\t\t\t\t\tblok={item}\n\t\t\t\t\tkey={item?._uid || `footer-item-${index}`}\n\t\t\t\t/>\n\t\t\t))}\n\t\t</div>\n\t);\n};\n\nexport default FooterItem;\n"],"names":[],"mappings":";;;;;;;AAAA;AAAA;AAAA;;;;;AAOA,MAAM,aAAa;QAAC,EAAE,IAAI,EAAiC;QAGvD;IAFH,qBACC,8VAAC,2dAAQ,IAAA,2YAAiB,EAAC;QAAqB,WAAU;kBACxD,iBAAA,4BAAA,cAAA,KAAM,KAAK,cAAX,kCAAA,YAAa,GAAG,CAAC,CAAC,MAAM,sBACxB,8VAAC,6cAAwB;gBACxB,MAAM;eACD,CAAA,iBAAA,2BAAA,KAAM,IAAI,KAAI,AAAC,eAAoB,OAAN;;;;;;;;;;AAKvC;KAXM;uCAaS","debugId":null}}]
+}
