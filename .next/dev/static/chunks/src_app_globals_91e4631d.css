@@ -829,11 +829,6 @@
     position: static;
   }
 
-  .sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
-
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
@@ -949,10 +944,6 @@
     margin-bottom: calc(var(--spacing) * 20);
   }
 
-  .block {
-    display: block;
-  }
-
   .flex {
     display: flex;
   }
@@ -963,10 +954,6 @@
 
   .hidden {
     display: none;
-  }
-
-  .inline {
-    display: inline;
   }
 
   .inline-flex {
