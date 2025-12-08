@@ -1,66 +1,106 @@
+"use client";
+
 import { StoryblokServerComponent } from "@storyblok/react/rsc";
+import { useEffect, useState } from "react";
 
 import type { Menu } from "@/.storyblok/types/287474179047807/storyblok-components";
 
 import LanguageSwitcher from "../ui/language-switcher";
 
 const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+	const toggleMobileMenu = () => {
+		setIsMobileMenuOpen(!isMobileMenuOpen);
+	};
+
+	// Close mobile menu when window is resized to desktop size
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth >= 768) {
+				setIsMobileMenuOpen(false);
+			}
+		};
+
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
 	return (
-		<header className="bg-[#151958] pt-6">
-			<div className="max-w-[1100px] rounded-[30px] bg-white mx-auto px-4 sm:px-6 lg:px-8">
-				<nav className="flex h-16 items-center justify-between">
+		<header className="bg-[#151958] pt-4 sm:pt-6">
+			<div className="max-w-[1100px] rounded-[20px] sm:rounded-[30px] bg-white md:mx-auto px-4 sm:px-6 lg:px-8 mx-5">
+				<nav className="flex h-14 sm:h-16 items-center justify-between">
 					{/* Logo Section */}
-					<div className="flex items-center space-x-3">
-						<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm transition-all hover:scale-105 hover:shadow-md">
-							<span className="text-xl font-bold">e</span>
+					<div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
+						<div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm transition-all hover:scale-105 hover:shadow-md">
+							<span className="text-lg sm:text-xl font-bold">e</span>
 						</div>
-						<span className="text-xl font-bold text-foreground sm:text-2xl">
+						<span className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
 							DigitalHub
 						</span>
 					</div>
 
 					{/* Navigation Menu - Desktop */}
-					<div>
+					<div className="hidden lg:flex items-center flex-1 justify-center mx-4">
 						{burger_menu?.[0] && (
 							<StoryblokServerComponent blok={burger_menu[0]} />
 						)}
 					</div>
 
-					{/* Right Section - Language Switcher */}
-					<div className="flex items-center space-x-4">
-						<LanguageSwitcher className="hidden sm:block" />
+					{/* Right Section - Language Switcher (Desktop) */}
+					<div className="hidden lg:flex items-center space-x-4 shrink-0">
+						<LanguageSwitcher />
 					</div>
 
-					{/* Mobile Menu Button - Placeholder for future mobile menu */}
-					<div className="flex items-center space-x-2 md:hidden">
-						<LanguageSwitcher className="sm:hidden" />
+					{/* Mobile Menu Button */}
+					<div className="flex items-center space-x-2 lg:hidden">
+						<LanguageSwitcher />
 						<button
 							type="button"
-							className="inline-flex items-center justify-center rounded-md p-2 text-foreground hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+							onClick={toggleMobileMenu}
+							className="inline-flex items-center justify-center rounded-md p-2 text-foreground hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary transition-colors"
 							aria-label="Toggle menu"
+							aria-expanded={isMobileMenuOpen}
 						>
-							<svg
-								className="h-6 w-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								strokeWidth="1.5"
-								stroke="currentColor"
-								aria-hidden="true"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-								/>
-							</svg>
+							{isMobileMenuOpen ? (
+								<svg
+									className="h-6 w-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth="1.5"
+									stroke="currentColor"
+									aria-hidden="true"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M6 18L18 6M6 6l12 12"
+									/>
+								</svg>
+							) : (
+								<svg
+									className="h-6 w-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									strokeWidth="1.5"
+									stroke="currentColor"
+									aria-hidden="true"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+									/>
+								</svg>
+							)}
 						</button>
 					</div>
 				</nav>
 
 				{/* Mobile Navigation Menu */}
-				{burger_menu?.[0] && (
-					<div className="border-t md:hidden">
-						<div className="px-2 py-4">
+				{burger_menu?.[0] && isMobileMenuOpen && (
+					<div className="border-t lg:hidden animate-in slide-in-from-top-2 duration-200">
+						<div className="px-4 py-4 space-y-2">
 							<StoryblokServerComponent blok={burger_menu[0]} />
 						</div>
 					</div>

@@ -6,39 +6,44 @@ const SBMenuItem = ({ blok }: { blok: MenuItem }) => {
 	return (
 		<div
 			{...storyblokEditable(blok as SbBlokData)}
-			className="flex items-center"
+			className="flex flex-col lg:flex-row lg:items-center w-full lg:w-auto"
 		>
-			<div className="">
+			<div className="w-full lg:w-auto">
 				{blok?.link?.url ? (
 					<Link
 						tabIndex={0}
 						href={blok?.link?.url}
 						target={blok.link?.target ?? "_self"}
-						className="no-underline"
+						className="no-underline block py-2 px-3 lg:py-1 lg:px-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors text-sm lg:text-base font-medium"
 					>
-						<h1 className="">{blok?.title}</h1>
+						{blok?.title}
 					</Link>
 				) : (
-					<button tabIndex={-1} type="button">
-						<h1 className="">{blok?.title}</h1>
+					<button
+						tabIndex={-1}
+						type="button"
+						className="block py-2 px-3 lg:py-1 lg:px-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors text-sm lg:text-base font-medium text-left w-full lg:w-auto"
+					>
+						{blok?.title}
 					</button>
 				)}
-				<div className="" />
 			</div>
 
 			{/* SubItems */}
-			<div className="">
-				{blok?.SubItems?.map((subitem) => (
-					<Link
-						href={subitem.link?.url ?? "#"}
-						target={subitem.link?.target ?? "_self"}
-						key={subitem._uid}
-						className=""
-					>
-						{subitem.title}
-					</Link>
-				))}
-			</div>
+			{blok?.SubItems && blok.SubItems.length > 0 && (
+				<div className="flex flex-col lg:flex-row lg:ml-2 pl-3 lg:pl-0 border-l lg:border-l-0 border-accent lg:border-none">
+					{blok.SubItems.map((subitem) => (
+						<Link
+							href={subitem.link?.url ?? "#"}
+							target={subitem.link?.target ?? "_self"}
+							key={subitem._uid}
+							className="py-1 px-3 lg:py-1 lg:px-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors text-xs lg:text-sm text-muted-foreground lg:text-foreground"
+						>
+							{subitem.title}
+						</Link>
+					))}
+				</div>
+			)}
 		</div>
 	);
 };
