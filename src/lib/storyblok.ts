@@ -1,14 +1,15 @@
-import { apiPlugin, storyblokInit } from "@storyblok/react/rsc";
-import dynamic from "next/dynamic";
 import Blog from "@/components/storyblok/blog";
 import Global from "@/components/storyblok/global";
 import Card from "@/components/ui/Card";
 import CommonPart from "@/components/ui/CommonPart";
+import Figures from "@/components/ui/Figures";
 import GetTouch from "@/components/ui/GetTouch";
 import Grid from "@/components/ui/Grid";
 import HeroBanner from "@/components/ui/HeroBanner";
 import Partner from "@/components/ui/Partner";
 import Process from "@/components/ui/Process";
+import { apiPlugin, storyblokInit } from "@storyblok/react/rsc";
+import dynamic from "next/dynamic";
 
 const Footer = dynamic(() => import("@/components/section/Footer"), {
 	ssr: true,
@@ -62,6 +63,7 @@ const components = {
 	process: Process,
 	gettouch: GetTouch,
 	partner: Partner,
+    figures: Figures,
 };
 
 export const getStoryblokApi = storyblokInit({
