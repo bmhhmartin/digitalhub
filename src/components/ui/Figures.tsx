@@ -1,3 +1,10 @@
+import type { SbBlokData } from "@storyblok/react/rsc";
+
+interface FiguresStoryblok extends SbBlokData {
+	figure_number?: string;
+	figure_details?: string;
+}
+
 export default function Figures({ blok }: { blok: FiguresStoryblok }) {
 	return (
 		<div className="bg-white rounded-lg p-6 shadow-md max-w-2xl border border-gray-200">
