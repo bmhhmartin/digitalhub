@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/martin/personal-projects/storyblok/digitalhub/src/components/storyblok/pageContent.tsx"],"sourcesContent":["import {\n\ttype SbBlokData,\n\tStoryblokServerComponent,\n\tstoryblokEditable,\n} from \"@storyblok/react/rsc\";\nimport type { Page } from \"@/.storyblok/types/287474179047807/storyblok-components\";\n\nconst pageContent = ({ blok }: { blok: Page }) => {\n\treturn (\n\t\t<div {...storyblokEditable(blok as SbBlokData)}>\n\t\t\t{blok?.body?.map((blok) => (\n\t\t\t\t<StoryblokServerComponent blok={blok} key={blok?._uid} />\n\t\t\t))}\n\t\t</div>\n\t);\n};\n\nexport default pageContent;\n"],"names":[],"mappings":";;;;;;;AAAA;AAAA;AAAA;;;;;AAOA,MAAM,cAAc;QAAC,EAAE,IAAI,EAAkB;QAGzC;IAFH,qBACC,8VAAC,2dAAQ,IAAA,2YAAiB,EAAC;kBACzB,iBAAA,4BAAA,aAAA,KAAM,IAAI,cAAV,iCAAA,WAAY,GAAG,CAAC,CAAC,qBACjB,8VAAC,6cAAwB;gBAAC,MAAM;eAAW,iBAAA,2BAAA,KAAM,IAAI;;;;;;;;;;AAIzD;uCAEe","debugId":null}}]
-}

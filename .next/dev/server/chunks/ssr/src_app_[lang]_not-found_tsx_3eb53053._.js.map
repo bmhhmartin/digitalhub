@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/martin/personal-projects/storyblok/digitalhub/src/app/%5Blang%5D/not-found.tsx"],"sourcesContent":["import Link from \"next/link\";\n\nexport default function NotFound() {\n\treturn (\n\t\t<div>\n\t\t\t<h2>Not Found</h2>\n\t\t\t<p>Could not find requested resource</p>\n\t\t\t<Link href=\"/\">Return Home</Link>\n\t\t</div>\n\t);\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACvB,qBACC,+YAAC;;0BACA,+YAAC;0BAAG;;;;;;0BACJ,+YAAC;0BAAE;;;;;;0BACH,+YAAC,2VAAI;gBAAC,MAAK;0BAAI;;;;;;;;;;;;AAGlB","debugId":null}}]
-}
