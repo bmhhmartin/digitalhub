@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/martin/personal-projects/storyblok/digitalhub/src/components/storyblok/hero.tsx"],"sourcesContent":["import {\n\trenderRichText,\n\ttype SbBlokData,\n\tstoryblokEditable,\n} from \"@storyblok/react/rsc\";\nimport parse from \"html-react-parser\";\nimport type { Hero as HeroStoryblok } from \"@/.storyblok/types/287474179047807/storyblok-components\";\n\nconst Hero = ({ blok }: { blok: HeroStoryblok }) => {\n\treturn (\n\t\t<div\n\t\t\t{...storyblokEditable(blok as SbBlokData)}\n\t\t\tclassName=\"flex h-[30vh] flex-col items-center justify-center bg-gray-200\"\n\t\t>\n\t\t\t<h1 className=\"mb-5 text-4xl\">{blok?.Title}</h1>\n\t\t\t<div className=\"richtext\">\n\t\t\t\t{parse(renderRichText(blok?.description) ?? \"\")}\n\t\t\t</div>\n\t\t</div>\n\t);\n};\n\nexport default Hero;\n"],"names":[],"mappings":";;;;;AAAA;AAAA;AAKA;;;;AAGA,MAAM,OAAO,CAAC,EAAE,IAAI,EAA2B;IAC9C,qBACC,+YAAC;QACC,GAAG,IAAA,wYAAiB,EAAC,KAAmB;QACzC,WAAU;;0BAEV,+YAAC;gBAAG,WAAU;0BAAiB,MAAM;;;;;;0BACrC,+YAAC;gBAAI,WAAU;0BACb,IAAA,gTAAK,EAAC,IAAA,qYAAc,EAAC,MAAM,gBAAgB;;;;;;;;;;;;AAIhD;uCAEe","debugId":null}}]
-}

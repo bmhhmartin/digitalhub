@@ -1,4 +1,0 @@
-[00:00:00.991] Server  LOG      ✓ Ready in 797ms
-[00:00:15.135] Browser WARN    Image with src "https://a.storyblok.com/f/288386390635210/856x806/65ca179006/xnip2025-11-13_15-36-10.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:00:15.135] Browser WARN    Image with src "https://a.storyblok.com/f/288386390635210/1134x1068/fdab6027e5/xnip2025-11-14_21-25-11.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

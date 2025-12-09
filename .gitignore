@@ -12,6 +12,7 @@ coverage
 out/
 build
 dist
+.next/dev/build/chunks
 
 # Logs
 *.log

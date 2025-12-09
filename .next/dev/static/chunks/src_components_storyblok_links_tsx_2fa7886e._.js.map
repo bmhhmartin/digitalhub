@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/martin/personal-projects/storyblok/digitalhub/src/components/storyblok/links.tsx"],"sourcesContent":["import { type SbBlokData, storyblokEditable } from \"@storyblok/react/rsc\";\nimport type { Links as LinksStoryblok } from \"@/.storyblok/types/287474179047807/storyblok-components\";\nimport { Link } from \"@/i18n/navigation\";\n\nconst Links = ({ blok }: { blok: LinksStoryblok }) => {\n\treturn (\n\t\t<Link\n\t\t\t{...storyblokEditable(blok as SbBlokData)}\n\t\t\tclassName=\"text-white\"\n\t\t\thref={blok?.link?.url ?? \"\"}\n\t\t\ttarget={blok?.link?.target ?? \"_self\"}\n\t\t>\n\t\t\t{blok?.text}\n\t\t</Link>\n\t);\n};\n\nexport default Links;\n"],"names":[],"mappings":";;;;;;;AAAA;AAAA;AAEA;;;;;;AAEA,MAAM,QAAQ;QAAC,EAAE,IAAI,EAA4B;QAKxC,YACE;QADF,gBACE;IALV,qBACC,8VAAC,oIAAI,sdACA,IAAA,2YAAiB,EAAC;QACtB,WAAU;QACV,MAAM,CAAA,iBAAA,iBAAA,4BAAA,aAAA,KAAM,IAAI,cAAV,iCAAA,WAAY,GAAG,cAAf,4BAAA,iBAAmB;QACzB,QAAQ,CAAA,oBAAA,iBAAA,4BAAA,cAAA,KAAM,IAAI,cAAV,kCAAA,YAAY,MAAM,cAAlB,+BAAA,oBAAsB;kBAE7B,iBAAA,2BAAA,KAAM,IAAI;;;;;;AAGd;KAXM;uCAaS","debugId":null}}]
-}

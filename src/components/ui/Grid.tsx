@@ -1,5 +1,5 @@
-import { StoryblokServerComponent } from "@storyblok/react/rsc";
 import type { Grid as GridStoryblok } from "@/.storyblok/types/287474179047807/storyblok-components";
+import { StoryblokServerComponent } from "@storyblok/react/rsc";
 
 export default function Grid({ blok }: { blok: GridStoryblok }) {
 	return (
