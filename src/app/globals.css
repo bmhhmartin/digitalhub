@@ -168,6 +168,10 @@ html {
 	color: black;
 }
 
+.container{
+    max-width: 1100px;
+}
+
 .richtext {
 	p {
 		margin-bottom: 1rem;

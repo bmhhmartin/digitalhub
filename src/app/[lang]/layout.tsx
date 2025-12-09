@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-import { NextIntlClientProvider } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
-import type { ReactNode } from "react";
 import type { Global } from "@/.storyblok/types/287474179047807/storyblok-components";
 import { StoryblokProvider } from "@/components/storyblokProvider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { i18n, type Locale } from "@/i18n/i18n-config";
 import { getStory } from "@/lib/fetchers/storyblok-fetcher";
+import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import dynamic from "next/dynamic";
+import type { ReactNode } from "react";
 import "../globals.css";
 const Header = dynamic(() => import("@/components/section/Header"));
 const Footer = dynamic(() => import("@/components/section/Footer"));

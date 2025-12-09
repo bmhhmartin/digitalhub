@@ -7,7 +7,10 @@ import type { Menu } from "@/.storyblok/types/287474179047807/storyblok-componen
 
 const SBMenu = ({ blok }: { blok: Menu }) => {
 	return (
-		<div {...storyblokEditable(blok as SbBlokData)} className="flex gap-4">
+		<div
+			{...storyblokEditable(blok as SbBlokData)}
+			className="flex flex-col lg:flex-row gap-2 lg:gap-4 w-full lg:w-auto"
+		>
 			{blok?.items?.map((blok) => (
 				<StoryblokServerComponent blok={blok} key={blok?._uid} />
 			))}
