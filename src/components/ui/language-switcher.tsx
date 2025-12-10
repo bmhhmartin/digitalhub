@@ -1,19 +1,19 @@
 "use client";
 
-import { useParams, useSearchParams } from "next/navigation";
-import { useLocale } from "next-intl";
-import { useEffect, useRef, useTransition } from "react";
 import { i18n, type Locale } from "@/i18n/i18n-config";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { useLocale } from "next-intl";
+import { useParams, useSearchParams } from "next/navigation";
+import { useEffect, useRef, useTransition } from "react";
 import {
-	Select,
-	SelectContent,
-	SelectGroup,
-	SelectItem,
-	SelectLabel,
-	SelectTrigger,
-	SelectValue,
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
 } from "./select";
 
 interface LanguageSwitcherProps {
@@ -67,7 +67,7 @@ const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
 				}
 			>
 				<SelectTrigger
-					className={cn("w-[180px]", hasWhiteText && "text-white")}
+					className={cn("w-[80px]", hasWhiteText && "text-white")}
 				>
 					<SelectValue placeholder="Select a language" />
 				</SelectTrigger>

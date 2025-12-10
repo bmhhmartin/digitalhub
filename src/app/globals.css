@@ -19,6 +19,10 @@ body {
   scrollbar-width: none; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Geometric 415 - 100 */
 
 @theme inline {

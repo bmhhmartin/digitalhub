@@ -1,5 +1,6 @@
 import type { SbBlokData } from "@storyblok/react/rsc";
 import Image from "next/image";
+import Link from "next/link";
 
 interface HeroBannerStoryblok extends SbBlokData {
 	hero_title?: string;
@@ -14,7 +15,7 @@ export default function HeroBanner({ blok }: { blok: HeroBannerStoryblok }) {
 			<div className="absolute inset-0 circuit-pattern opacity-20"></div>
 
 			{/* Main Content Container */}
-			<div className="container mx-auto px-6 lg:px-8 relative z-10">
+			<div className="container mx-auto px-4 lg:px-8 relative z-10">
 				<div className="grid lg:grid-cols-2 gap-12 items-center">
 					{/* Left Section - Text Content */}
 					<div className="text-left">
@@ -24,6 +25,32 @@ export default function HeroBanner({ blok }: { blok: HeroBannerStoryblok }) {
 						<p className="text-lg lg:text-xl text-white leading-relaxed max-w-2xl">
 							{blok.hero_details}
 						</p>
+                        <div className="pt-10 flex items-center gap-4">
+                            <Link href="#offers" className="text-white text-[16px] font-bold flex flex-col justify-center text-center">
+                                <span className="text-[16px] font-bold">
+                                    Why Ecohub Offer
+                                </span>
+                                <span className="text-lg sm:text-xl font-bold">
+                                    ⌄
+                                </span>
+                            </Link>
+                            <Link href="#whyEcohub" className="text-white text-[16px] font-bold flex flex-col justify-center text-center">
+                                <span className="text-[16px] font-bold">
+                                    Why EcoHub
+                                </span>
+                                <span className="text-lg sm:text-xl font-bold">
+                                    ⌄
+                                </span>
+                            </Link>
+                            <Link href="#behindEcohub" className="text-white text-[16px] font-bold flex flex-col justify-center text-center">
+                                <span className="text-[16px] font-bold">
+                                    Who's Behind EcoHub
+                                </span>
+                                <span className="text-lg sm:text-xl font-bold">
+                                    ⌄
+                                </span>
+                            </Link>
+                        </div>
 					</div>
 
 					{/* Right Section - 3D Network Graphic */}
