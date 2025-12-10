@@ -7,7 +7,7 @@ import Link from "next/link";
 interface CardStoryblok extends SbBlokData {
     blog_card_image?: { filename?: string; alt?: string };
     blog_card_title?: string;
-    blog_card_url?: { url?: string };
+    blog_card_url?: string;
     blog_card_btn_text?: string;
     blog_card_description?: any; // FIXED
 }
@@ -47,13 +47,14 @@ export default function Card({ blok }: { blok: CardStoryblok }) {
 
                 {/* Button */}
                 {blok.blog_card_btn_text && (
-                    <Link
-                        href={blok.blog_card_url?.url ?? "#"} // FIXED
+                   <Link
+                        href={`/blog/${blok.blog_card_url ?? "#"}`}
                         aria-label={`${blok.blog_card_btn_text || "Read More"} ${blok.blog_card_title || ""} - full blog post`}
                         className="text-[#1a1a2e] font-bold text-sm hover:underline inline-block"
-                    >
+                        >
                         {blok.blog_card_btn_text}
                     </Link>
+                 
                 )}
             </div>
         </div>
