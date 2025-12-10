@@ -33,7 +33,7 @@ export default function Process({ blok }: { blok: ProcessStoryblok }) {
 			<div className="absolute inset-0 bg-[#1caf7c]/90 group-hover:bg-[#151958]/90 z-0 transition-colors duration-300"></div>
 
 			{/* Content Container */}
-			<div className="relative z-10 container mx-auto px-6 py-20 lg:py-32">
+			<div className="relative z-10 container mx-auto px-4 py-20 lg:py-32">
 				<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					{/* Left Side - Text Content */}
 					<div className="text-white space-y-8">

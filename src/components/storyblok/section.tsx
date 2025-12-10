@@ -10,7 +10,7 @@ const Section = ({ blok }: { blok: SectionStoryblok }) => {
 	return (
 		<section
 			{...storyblokEditable(blok as SbBlokData)}
-			className="flex flex-col items-center py-20"
+			className="flex flex-col items-center py-20 px-4 lg:px-0"
 		>
 			<div className="container">
                 <h2 className="text-3xl lg:text-4xl font-bold text-black leading-tight mb-6">{blok?.title}</h2>

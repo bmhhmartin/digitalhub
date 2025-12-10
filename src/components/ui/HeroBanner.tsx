@@ -14,7 +14,7 @@ export default function HeroBanner({ blok }: { blok: HeroBannerStoryblok }) {
 			<div className="absolute inset-0 circuit-pattern opacity-20"></div>
 
 			{/* Main Content Container */}
-			<div className="container mx-auto px-6 lg:px-8 relative z-10">
+			<div className="container mx-auto px-4 lg:px-8 relative z-10">
 				<div className="grid lg:grid-cols-2 gap-12 items-center">
 					{/* Left Section - Text Content */}
 					<div className="text-left">

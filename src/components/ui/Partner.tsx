@@ -24,7 +24,7 @@ export default function Partner({ blok }: { blok?: PartnerStoryblok }) {
 
 	return (
 		<section className="w-full bg-white">
-			<div className="container mx-auto px-6 lg:px-8">
+			<div className="container mx-auto px-4 lg:px-8">
 				<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					{/* Left Section - Text Content */}
 					<div className="space-y-6">
