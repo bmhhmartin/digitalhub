@@ -48,7 +48,7 @@ export default function Card({ blok }: { blok: CardStoryblok }) {
                 {/* Button */}
                 {blok.blog_card_btn_text && (
                     <Link
-                        href={blok.blog_card_url?.url ?? "#"} // FIXED
+                        href={blok.blog_card_url ?? "#"} // FIXED
                         aria-label={`${blok.blog_card_btn_text || "Read More"} ${blok.blog_card_title || ""} - full blog post`}
                         className="text-[#1a1a2e] font-bold text-sm hover:underline inline-block"
                     >
