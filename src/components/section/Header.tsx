@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import type { Menu } from "@/.storyblok/types/287474179047807/storyblok-components";
 
+import Link from "next/link";
 import LanguageSwitcher from "../ui/language-switcher";
 
 const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
@@ -27,17 +28,20 @@ const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
 	}, []);
 
 	return (
-		<header className="bg-[#151958] pt-4 sm:pt-6">
+		<header className="bg-[#151958] py-4 sm:pt-6">
 			<div className="max-w-[1100px] rounded-[20px] sm:rounded-[30px] bg-white md:mx-auto px-4 sm:px-6 lg:px-8 mx-5">
 				<nav className="flex h-14 sm:h-16 items-center justify-between">
 					{/* Logo Section */}
 					<div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
-						<div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm transition-all hover:scale-105 hover:shadow-md">
-							<span className="text-lg sm:text-xl font-bold">e</span>
-						</div>
-						<span className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
-							DigitalHub
-						</span>
+						<Link href='/' className="flex items-center gap-2">
+                            <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm transition-all hover:scale-105 hover:shadow-md">
+                                <span className="text-lg sm:text-xl font-bold">e</span>
+                            </div>
+                            <span className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
+                                DigitalHub
+                            </span>
+                        </Link>
+                        
 					</div>
 
 					{/* Navigation Menu - Desktop */}
