@@ -3,6 +3,7 @@ import Global from "@/components/storyblok/global";
 import BlogCard from "@/components/ui/BlogCard";
 import Card from "@/components/ui/Card";
 import CommonPart from "@/components/ui/CommonPart";
+import DataExchange from "@/components/ui/DataExchange";
 import Figures from "@/components/ui/Figures";
 import GetTouch from "@/components/ui/GetTouch";
 import Grid from "@/components/ui/Grid";
@@ -66,6 +67,7 @@ const components = {
 	partner: Partner,
     figures: Figures,
     blogcard: BlogCard,
+    dataexchange: DataExchange,
 };
 
 export const getStoryblokApi = storyblokInit({
