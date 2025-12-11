@@ -42,12 +42,12 @@ export default function Partner({ blok }: { blok?: PartnerStoryblok }) {
 						)}
 
 						{/* Title */}
-						<h2 className="text-3xl lg:text-4xl font-bold text-black leading-tight">
+						<h2 className="text-3xl lg:text-4xl font-medium text-black leading-tight" style={{ fontFamily: 'Geograph Test' }}>
 							{title}
 						</h2>
 
 						{/* Description */}
-						<p className="text-base lg:text-lg text-black leading-relaxed max-w-2xl">
+						<p className="text-base lg:text-lg text-black leading-relaxed max-w-2xl font-normal" style={{ fontFamily: 'Proxima Nova' }}>
 							{description}
 						</p>
 					</div>

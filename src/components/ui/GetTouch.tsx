@@ -10,12 +10,12 @@ interface GetTouchStoryblok extends SbBlokData {
 
 export default function GetTouch({ blok }: { blok: GetTouchStoryblok }) {
 	return (
-		<div className="w-full flex justify-center items-center my-20 px-4 lg:px-0">
-			<div className="w-full max-w-[1200px] rounded-[60px] bg-gradient-to-r from-pink-500 to-purple-800 p-12 text-center py-[100px]">
-				<h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+		<div className="w-full flex justify-center items-center my-20 px-4 lg:px-0" >
+			<div className="w-full max-w-[1200px] rounded-[60px] p-12 text-center py-[100px] no-repeat bg-cover bg-center" style={{backgroundImage: 'url(/bg.webp)'}}>
+				<h2 className="text-4xl lg:text-5xl font-medium text-white mb-6" style={{ fontFamily: 'Geograph Test' }}>
 					{blok.get_title}
 				</h2>
-				<p className="text-lg lg:text-xl text-white max-w-2xl mx-auto placeholder-amber-100 mb-20">
+				<p className="text-lg lg:text-xl text-white max-w-2xl mx-auto placeholder-amber-100 mb-20 font-normal" style={{ fontFamily: 'Proxima Nova' }}>
 					{blok.get_description}
 				</p>
 				<Link

@@ -19,15 +19,18 @@ export default function HeroBanner({ blok }: { blok: HeroBannerStoryblok }) {
 				<div className="grid lg:grid-cols-2 gap-12 items-center">
 					{/* Left Section - Text Content */}
 					<div className="text-left">
-						<h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white!">
+                        <h1
+                            className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white"
+                            style={{ fontFamily: 'Geograph Test' }}
+                            >
 							<span className="text-pink-500">{blok.hero_title} </span>
 						</h1>
-						<p className="text-lg lg:text-xl text-white leading-relaxed max-w-2xl">
+						<p className="text-lg lg:text-xl text-white leading-relaxed max-w-2xl font-normal" style={{ fontFamily: 'Proxima Nova' }}>
 							{blok.hero_details}
 						</p>
                         <div className="pt-10 flex items-center gap-4">
                             <Link href="#offers" className="text-white text-[16px] font-bold flex flex-col justify-center text-center">
-                                <span className="text-[16px] font-bold">
+                                <span className="text-[16px] font-semibold" style={{ fontFamily: 'Geograph Test' }}>
                                     Why Ecohub Offer
                                 </span>
                                 <span className="text-lg sm:text-xl font-bold">
@@ -35,7 +38,7 @@ export default function HeroBanner({ blok }: { blok: HeroBannerStoryblok }) {
                                 </span>
                             </Link>
                             <Link href="#whyEcohub" className="text-white text-[16px] font-bold flex flex-col justify-center text-center">
-                                <span className="text-[16px] font-bold">
+                                <span className="text-[16px] font-semibold" style={{ fontFamily: 'Geograph Test' }}>
                                     Why EcoHub
                                 </span>
                                 <span className="text-lg sm:text-xl font-bold">
@@ -43,7 +46,7 @@ export default function HeroBanner({ blok }: { blok: HeroBannerStoryblok }) {
                                 </span>
                             </Link>
                             <Link href="#behindEcohub" className="text-white text-[16px] font-bold flex flex-col justify-center text-center">
-                                <span className="text-[16px] font-bold">
+                                <span className="text-[16px] font-semibold" style={{ fontFamily: 'Geograph Test' }}>
                                     Who's Behind EcoHub
                                 </span>
                                 <span className="text-lg sm:text-xl font-bold">
