@@ -38,12 +38,12 @@ export default function Process({ blok }: { blok: ProcessStoryblok }) {
 					{/* Left Side - Text Content */}
 					<div className="text-white space-y-8">
 						{/* Title */}
-						<h2 className="text-5xl lg:text-6xl font-bold leading-tight">
+						<h2 className="text-5xl lg:text-6xl font-normal leading-tight" style={{ fontFamily: 'Proxima Nova' }}>
 							{blok.process_title}
 						</h2>
 
 						{/* Main Description */}
-						<p className="text-lg lg:text-xl leading-relaxed text-white/95 max-w-2xl">
+						<p className="text-lg lg:text-xl leading-relaxed text-white/95 max-w-2xl font-normal" style={{ fontFamily: 'Proxima Nova' }}>
 							{blok.process_details}
 						</p>
 

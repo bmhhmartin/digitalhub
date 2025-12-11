@@ -5,11 +5,14 @@ import { useEffect, useState } from "react";
 
 import type { Menu } from "@/.storyblok/types/287474179047807/storyblok-components";
 
+import { usePathname } from "@/i18n/navigation";
 import Link from "next/link";
 import LanguageSwitcher from "../ui/language-switcher";
 
 const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+	const pathname = usePathname();
 
 	const toggleMobileMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -27,15 +30,38 @@ const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
+	// Reset scroll state when route changes
+	useEffect(() => {
+		setIsScrolled(false);
+	}, [pathname]);
+
+	// Add blueHeader className when scrolled 800px or more
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY >= 800);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		// Check initial scroll position
+		handleScroll();
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
+
+
+        const headerClass = pathname === '/start'
+        ? (isScrolled ? "blueHeader" : "")
+        : (!isScrolled ? "blueHeader" : "blueHeader");
+
 	return (
-		<header className="bg-[#151958] py-4 sm:pt-6">
-			<div className="max-w-[1100px] rounded-[20px] sm:rounded-[30px] bg-white md:mx-auto px-4 sm:px-6 lg:px-8 mx-5">
+		<header className={`py-4 sm:pt-6 ${headerClass}`}>
+			<div className="headerColor max-w-[1100px] rounded-[20px] sm:rounded-[30px] md:mx-auto px-4 sm:px-6 lg:px-8 mx-5">
 				<nav className="flex h-14 sm:h-16 items-center justify-between">
 					{/* Logo Section */}
 					<div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
-						<Link href='/' className="flex items-center gap-2">
-                            <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm transition-all hover:scale-105 hover:shadow-md">
-                                <span className="text-lg sm:text-xl font-bold">e</span>
+						<Link href='/' className="flex items-center gap-2 logo_text">
+                            <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-[#151958] text-primary-foreground shadow-sm transition-all hover:scale-105 hover:shadow-md">
+                                <span className="text-lg sm:text-xl font-bold">D</span>
                             </div>
                             <span className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
                                 DigitalHub
