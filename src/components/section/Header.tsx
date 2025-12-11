@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import type { Menu } from "@/.storyblok/types/287474179047807/storyblok-components";
 
 import Link from "next/link";
+import { usePathname } from "@/i18n/navigation";
 import LanguageSwitcher from "../ui/language-switcher";
 
 const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
@@ -47,7 +48,7 @@ const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
 					{/* Logo Section */}
 					<div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
 						<Link href='/' className="flex items-center gap-2 logo_text">
-                            <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm transition-all hover:scale-105 hover:shadow-md">
+                            <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-[#151958] text-primary-foreground shadow-sm transition-all hover:scale-105 hover:shadow-md">
                                 <span className="text-lg sm:text-xl font-bold">D</span>
                             </div>
                             <span className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
