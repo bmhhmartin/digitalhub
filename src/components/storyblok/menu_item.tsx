@@ -1,6 +1,6 @@
-import { type SbBlokData, storyblokEditable } from "@storyblok/react/rsc";
 import type { MenuItem } from "@/.storyblok/types/287474179047807/storyblok-components";
 import { Link } from "@/i18n/navigation";
+import { type SbBlokData, storyblokEditable } from "@storyblok/react/rsc";
 
 const SBMenuItem = ({ blok }: { blok: MenuItem }) => {
 	return (
@@ -14,7 +14,7 @@ const SBMenuItem = ({ blok }: { blok: MenuItem }) => {
 						tabIndex={0}
 						href={blok?.link?.url}
 						target={blok.link?.target ?? "_self"}
-						className="no-underline block py-2 px-3 lg:py-1 lg:px-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors text-sm lg:text-base font-medium"
+						className="no-underline block py-2 px-3 lg:py-1 lg:px-2 rounded-md text-sm lg:text-base font-medium"
 					>
 						{blok?.title}
 					</Link>

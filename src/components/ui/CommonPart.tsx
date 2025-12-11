@@ -8,7 +8,7 @@ interface CommonPartStoryblok extends SbBlokData {
 
 export default function CommonPart({ blok }: { blok: CommonPartStoryblok }) {
 	return (
-		<div id={blok.common_id} className="max-w-[800px] mx-auto">
+		<div id={blok.common_id} className="max-w-[800px] mx-auto pt-20">
 			<div className="w-full px-4 sm:px-6 lg:px-8 my-10 text-center">
 				<h2 className="text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
 					{blok.common_title}

@@ -5,13 +5,14 @@ import { useEffect, useState } from "react";
 
 import type { Menu } from "@/.storyblok/types/287474179047807/storyblok-components";
 
-import Link from "next/link";
 import { usePathname } from "@/i18n/navigation";
+import Link from "next/link";
 import LanguageSwitcher from "../ui/language-switcher";
 
 const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
+	const pathname = usePathname();
 
 	const toggleMobileMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -29,7 +30,12 @@ const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
-	// Add blueHeader className when scrolled 500px or more
+	// Reset scroll state when route changes
+	useEffect(() => {
+		setIsScrolled(false);
+	}, [pathname]);
+
+	// Add blueHeader className when scrolled 800px or more
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY >= 800);
@@ -41,8 +47,14 @@ const Header = ({ burger_menu }: { burger_menu?: Menu[] }) => {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
+
+
+        const headerClass = pathname === '/start'
+        ? (isScrolled ? "blueHeader" : "")
+        : (!isScrolled ? "blueHeader" : "blueHeader");
+
 	return (
-		<header className={`py-4 sm:pt-6 ${isScrolled ? "blueHeader" : ""}`}>
+		<header className={`py-4 sm:pt-6 ${headerClass}`}>
 			<div className="headerColor max-w-[1100px] rounded-[20px] sm:rounded-[30px] md:mx-auto px-4 sm:px-6 lg:px-8 mx-5">
 				<nav className="flex h-14 sm:h-16 items-center justify-between">
 					{/* Logo Section */}
