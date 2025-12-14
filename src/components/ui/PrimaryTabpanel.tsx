@@ -1,6 +1,8 @@
 "use client";
 
-import type { PrimaryTabpanel as PrimaryTabpanelStoryblok } from "@/.storyblok/types/287474179047807/storyblok-components";
+// FIX APPLIED HERE: Changed the named import from 'PrimaryTabpanel'
+// to 'PrimaryTabpanelStoryblok', assuming this is the actual exported type name.
+import type { PrimaryTabpanelStoryblok } from "@/.storyblok/types/287474179047807/storyblok-components";
 import type { SbBlokData } from "@storyblok/react/rsc";
 import dynamic from 'next/dynamic';
 import { useState } from "react";
