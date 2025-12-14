@@ -20,7 +20,7 @@ export default function HeroBanner({ blok }: { blok: HeroBannerStoryblok }) {
 					{/* Left Section - Text Content */}
 					<div className="text-left">
                         <h1
-                            className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white"
+                            className="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white pt-[100px] lg:pt-0"
                             style={{ fontFamily: 'Geograph Test' }}
                             >
 							<span className="text-pink-500">{blok.hero_title} </span>
