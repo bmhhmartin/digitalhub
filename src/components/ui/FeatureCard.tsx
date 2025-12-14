@@ -21,6 +21,7 @@ export default function FeatureCard({ blok }: { blok: FeatureCardStoryblok }) {
     return (
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 h-full flex flex-col transition duration-300 hover:shadow-xl">
             
+            {/* Icon */}
             {blok.icon_image?.filename && (
                 <div className="mb-4">
                     <Image
@@ -33,18 +34,21 @@ export default function FeatureCard({ blok }: { blok: FeatureCardStoryblok }) {
                 </div>
             )}
 
+            {/* Title */}
             {blok.card_title && (
                 <h3 className="text-xl font-bold text-[#1a1a2e] mb-3 leading-snug">
                     {blok.card_title}
                 </h3>
             )}
 
+            {/* Description */}
             {blok.card_details && (
                 <div className="text-gray-600 text-base leading-relaxed mb-6 flex-grow">
                     {blok.card_details}
                 </div>
             )}
 
+            {/* "View Details" Link */}
             {(blok.link_url || blok.link_text) && (
                 <a
                     href={blok.link_url || "#"}

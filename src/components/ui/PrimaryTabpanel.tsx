@@ -5,35 +5,43 @@ import type { SbBlokData } from "@storyblok/react/rsc";
 import dynamic from 'next/dynamic';
 import { useState } from "react";
 
+// Dynamic import fix: Ensures the inner component (TabPanelStep.tsx) is loaded correctly
 const DynamicStoryblokServerComponent = dynamic(
     () => import('@storyblok/react/rsc').then(mod => mod.StoryblokServerComponent), 
     { ssr: false } 
 );
 
+// Interface for the blocks inside primary_tabpanel (which are TabPanelStep blocks)
 interface TabContentBlock extends SbBlokData {
-    tab_menu?: string; 
+    // Including fields present in the JSON that could serve as the tab title
+    tab_title_input?: string;
 }
 
+/**
+ * Renders a Primary Tab Panel component with sidebar navigation.
+ */
 export default function PrimaryTabpanel({ blok }: { blok: PrimaryTabpanelStoryblok }) {
+    
+    // Type assertion for the array of tab step blocks
     const tabData: TabContentBlock[] = (blok.primary_tabpanel || []) as TabContentBlock[];
     
+    // Set the initial active tab to the first one's UID, if it exists
     const [activeTabUid, setActiveTabUid] = useState(tabData[0]?._uid || null);
+    
+    // Find the data block for the currently active tab
     const activeTabData = tabData.find(step => step._uid === activeTabUid);
 
     return (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            
-            <p className="text-xl text-gray-700 mb-8 max-w-4xl">
-                Leverage secure, proven digital solutions like IAM, SSO, and our data exchange 
-                platform to streamline processes and focus on what truly matters.
-            </p>
 
             <div className="flex flex-col lg:flex-row gap-12">
                 
                 {/* Left Sidebar Navigation (Menu) */}
                 <div className="lg:w-1/4 shrink-0 border-r border-gray-200 lg:pr-8">
                     {tabData.map((step) => {
-                        const tabMenuTitle = step.tab_menu || "Tab Item";
+                        const tabMenuTitle = 
+                            step.tab_title_input || "Tab Item Title Missing"; 
+
                         const isActive = step._uid === activeTabUid;
 
                         return (
@@ -57,9 +65,8 @@ export default function PrimaryTabpanel({ blok }: { blok: PrimaryTabpanelStorybl
                 {/* Right Content Area (Renders the active TabPanelStep) */}
                 <div className="lg:w-3/4 flex-grow">
                     {activeTabData && (
-                        <div className="grid grid-cols-2">
-                            <DynamicStoryblokServerComponent blok={activeTabData} key={activeTabData._uid} />
-                        </div>
+                        // Renders the full content of the active tab step
+                        <DynamicStoryblokServerComponent blok={activeTabData} key={activeTabData._uid} />
                     )}
                 </div>
             </div>
