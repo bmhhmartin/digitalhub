@@ -60,6 +60,7 @@ const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
 	return (
 		<div ref={containerRef} className={cn("relative inline-flex", className)}>
 			<Select
+                className="lang_back"
 				aria-label="Select Language"
 				value={currentLanguage}
 				onValueChange={(value) =>
