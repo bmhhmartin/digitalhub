@@ -9,7 +9,6 @@ const DynamicStoryblokServerComponent = dynamic(
 );
 
 interface TabPanelStepStoryblok extends SbBlokData {
-    // Corrected interface field name: The blocks array is named 'tab_step'
     tab_step?: SbBlokData[]; 
     tab_title_input?: string; 
 }
@@ -18,11 +17,8 @@ export default function TabPanelStep({ blok }: { blok: TabPanelStepStoryblok }) 
     if (!blok) {
         return null;
     }
-
-    // Accessing the content from the correct 'tab_step' field
     const contentBlocks = blok.tab_step; 
 
-    // Diagnostic check: This will disappear when data is present
     if (!contentBlocks || contentBlocks.length === 0) {
         return (
             <p className="text-red-500">
@@ -33,8 +29,7 @@ export default function TabPanelStep({ blok }: { blok: TabPanelStepStoryblok }) 
 
     return (
         <div className="flex flex-col">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Rendering the content found in the tab_step array */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {contentBlocks.map((contentBlok) => (
                     <DynamicStoryblokServerComponent 
                         blok={contentBlok} 
