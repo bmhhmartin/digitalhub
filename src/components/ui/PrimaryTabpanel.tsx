@@ -1,8 +1,9 @@
 "use client";
 
-// FIX APPLIED HERE: Changed the named import from 'PrimaryTabpanel'
-// to 'PrimaryTabpanelStoryblok', assuming this is the actual exported type name.
-import type { PrimaryTabpanelStoryblok } from "@/.storyblok/types/287474179047807/storyblok-components";
+// FIX APPLIED HERE:
+// 1. Changed the named import to 'PrimaryTabpanel' (assuming this is the actual exported type name).
+// 2. The component's prop type in the function signature is now also 'PrimaryTabpanel'.
+import type { PrimaryTabpanel } from "@/.storyblok/types/287474179047807/storyblok-components";
 import type { SbBlokData } from "@storyblok/react/rsc";
 import dynamic from 'next/dynamic';
 import { useState } from "react";
@@ -16,7 +17,7 @@ interface TabContentBlock extends SbBlokData {
     tab_title_input?: string;
 }
 
-export default function PrimaryTabpanel({ blok }: { blok: PrimaryTabpanelStoryblok }) {
+export default function PrimaryTabpanel({ blok }: { blok: PrimaryTabpanel }) {
     const tabData: TabContentBlock[] = (blok.primary_tabpanel || []) as TabContentBlock[];
     const [activeTabUid, setActiveTabUid] = useState(tabData[0]?._uid || null);
 
