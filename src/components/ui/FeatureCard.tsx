@@ -45,7 +45,7 @@ export default function FeatureCard({ blok }: { blok: FeatureCardStoryblok }) {
                     )}
 
                     {blok.card_details && (
-                        <div className="text-[#73759b] text-[16px] leading-5 mb-6 flex-grow" style={{ fontFamily: 'Proxima Nova' }}>
+                        <div className="text-[#73759b] text-[16px] leading-5 mb-6 grow" style={{ fontFamily: 'Proxima Nova' }}>
                             {blok.card_details}
                         </div>
                     )}

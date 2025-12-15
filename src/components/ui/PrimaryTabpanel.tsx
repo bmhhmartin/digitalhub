@@ -39,7 +39,7 @@ export default function PrimaryTabpanel({ blok }: { blok: PrimaryTabpanelStorybl
                         return (
                             <button
                                 key={step._uid}
-                                onClick={() => setActiveTabUid(step._uid)}
+                                onClick={() => setActiveTabUid(step._uid || null)}
                                 className={`
                                     block text-left py-2 mb-2 text-lg font-semibold transition-colors duration-200 cursor-pointer
                                     ${isActive
@@ -55,7 +55,7 @@ export default function PrimaryTabpanel({ blok }: { blok: PrimaryTabpanelStorybl
                 </div>
 
                 {/* Right Content Area (Renders the active TabPanelStep) */}
-                <div className="lg:w-4/5 flex-grow">
+                <div className="lg:w-4/5 grow">
                     {activeTabData && (
                         <DynamicStoryblokServerComponent blok={activeTabData} key={activeTabData._uid} />
                     )}
