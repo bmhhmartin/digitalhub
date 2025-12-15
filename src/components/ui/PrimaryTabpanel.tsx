@@ -1,10 +1,5 @@
 "use client";
 
-// FIX APPLIED HERE:
-// 1. Reverted the type name back to the original alias: 'PrimaryTabpanelStoryblok'.
-// 2. CHANGED THE IMPORT PATH to the common aggregated file location: '@/.storyblok/components-types'.
-import type { PrimaryTabpanelStoryblok } from "@/.storyblok/components-types";
-
 import type { SbBlokData } from "@storyblok/react/rsc";
 import dynamic from 'next/dynamic';
 import { useState } from "react";
@@ -16,6 +11,10 @@ const DynamicStoryblokServerComponent = dynamic(
 
 interface TabContentBlock extends SbBlokData {
     tab_title_input?: string;
+}
+
+interface PrimaryTabpanelStoryblok extends SbBlokData {
+    primary_tabpanel?: TabContentBlock[];
 }
 
 export default function PrimaryTabpanel({ blok }: { blok: PrimaryTabpanelStoryblok }) {
