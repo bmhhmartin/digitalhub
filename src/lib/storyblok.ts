@@ -4,12 +4,15 @@ import BlogCard from "@/components/ui/BlogCard";
 import Card from "@/components/ui/Card";
 import CommonPart from "@/components/ui/CommonPart";
 import DataExchange from "@/components/ui/DataExchange";
+import FeatureCard from "@/components/ui/FeatureCard";
 import Figures from "@/components/ui/Figures";
 import GetTouch from "@/components/ui/GetTouch";
 import Grid from "@/components/ui/Grid";
 import HeroBanner from "@/components/ui/HeroBanner";
 import Partner from "@/components/ui/Partner";
+import PrimaryTabpanel from "@/components/ui/PrimaryTabpanel";
 import Process from "@/components/ui/Process";
+import TabPanelStep from "@/components/ui/TabPanelStep";
 import { apiPlugin, storyblokInit } from "@storyblok/react/rsc";
 import dynamic from "next/dynamic";
 
@@ -68,6 +71,9 @@ const components = {
     figures: Figures,
     blogcard: BlogCard,
     dataexchange: DataExchange,
+    primary_tabpanel: PrimaryTabpanel,
+    tabpanel_step: TabPanelStep,
+    feature_card: FeatureCard,
 };
 
 export const getStoryblokApi = storyblokInit({
