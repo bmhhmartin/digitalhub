@@ -13,7 +13,7 @@ const Section = ({ blok }: { blok: SectionStoryblok }) => {
 			className="flex flex-col items-center py-20 px-4 lg:px-0"
 		>
 			<div className="container">
-                <h2 className="text-3xl lg:text-4xl font-bold text-black leading-tight mb-6">{blok?.title}</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-black leading-tight mb-6 mt-10">{blok?.title}</h2>
                 <div className="w-full">
                     <div className="richtext mt-10">
                         {parse(renderRichText(blok?.description) ?? "")}
